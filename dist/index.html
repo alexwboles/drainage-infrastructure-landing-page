@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071a22">
+  <meta name="description" content="AlderFlow provides responsive drainage services and dependable infrastructure support across Ireland.">
+  <title>AlderFlow | Drainage & Infrastructure</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23071a22'/%3E%3Cpath d='M12 20h40v10H38v22H26V30H12z' fill='%23f5c542'/%3E%3Ccircle cx='32' cy='20' r='7' fill='%23f8fbfc'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#071a22;--ink2:#102c37;--steel:#2f4853;--mist:#e8eff1;--paper:#f8fbfc;--white:#fff;--signal:#f5c542;--signal2:#ffd969;--line:rgba(7,26,34,.16);--shadow:0 22px 60px rgba(7,26,34,.13);--radius:20px;--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;color:var(--ink);background:var(--paper);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1rem;line-height:1.6}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:linear-gradient(rgba(7,26,34,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(7,26,34,.035) 1px,transparent 1px);background-size:32px 32px;z-index:-1}
+    a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit}:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+    .skip{position:fixed;left:1rem;top:-5rem;z-index:100;background:var(--signal);color:var(--ink);padding:.75rem 1rem;border-radius:8px;font-weight:800}.skip:focus{top:1rem}
+    .wrap{width:min(calc(100% - 2rem),var(--max));margin-inline:auto}.eyebrow{display:inline-flex;align-items:center;gap:.55rem;margin:0 0 1rem;color:var(--steel);font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:2.25rem;height:.25rem;background:var(--signal)}
+    h1,h2,h3{margin:0;line-height:1.05;letter-spacing:-.035em}h1{font-size:clamp(2.65rem,6vw,5.8rem);max-width:11ch}h2{font-size:clamp(2rem,4vw,3.8rem);max-width:15ch}h3{font-size:1.3rem}p{margin:0}
+    .header{position:sticky;top:0;z-index:40;color:var(--white);background:rgba(7,26,34,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.1)}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{display:inline-flex;align-items:center;gap:.75rem;color:var(--white);text-decoration:none;font-weight:900;letter-spacing:-.02em}.mark{width:38px;height:38px;display:grid;place-items:center;color:var(--ink);background:var(--signal);border-radius:9px 9px 9px 2px;font-size:1.1rem}.brand small{display:block;color:rgba(255,255,255,.62);font-size:.66rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}
+    .links{display:flex;align-items:center;gap:1.6rem}.links a{color:rgba(255,255,255,.78);text-decoration:none;font-size:.9rem;font-weight:700}.links a:hover{color:var(--white)}
+    .button,.nav-cta{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:48px;padding:.8rem 1.1rem;border:1px solid transparent;border-radius:10px;font-weight:850;text-decoration:none;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s ease}.nav-cta,.primary{color:var(--ink);background:var(--signal)}.nav-cta:hover,.primary:hover{background:var(--signal2);transform:translateY(-2px)}.secondary{color:var(--white);border-color:rgba(255,255,255,.35);background:transparent}.secondary:hover{border-color:var(--white);background:rgba(255,255,255,.06)}
+    .hero{position:relative;overflow:hidden;color:var(--white);background:radial-gradient(circle at 82% 28%,rgba(245,197,66,.18),transparent 28rem),linear-gradient(125deg,var(--ink) 0 64%,#0f303a 64%);padding:clamp(4rem,8vw,7.8rem) 0 3rem}.hero:after{content:"";position:absolute;right:-8rem;top:2rem;width:30rem;height:30rem;border:1px solid rgba(245,197,66,.28);border-radius:50%;box-shadow:0 0 0 70px rgba(245,197,66,.045),0 0 0 140px rgba(245,197,66,.025)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:clamp(2rem,7vw,6rem);align-items:end}.hero-grid>*{min-width:0}.hero .eyebrow{color:rgba(255,255,255,.68)}.hero-copy>p:not(.eyebrow){max-width:58ch;margin-top:1.5rem;color:rgba(255,255,255,.74);font-size:clamp(1.05rem,1.6vw,1.25rem)}.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+    .response{position:relative;padding:1.6rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);box-shadow:var(--shadow)}.response:before{content:"";position:absolute;left:1.6rem;top:-4px;width:5rem;height:8px;border-radius:999px;background:var(--signal)}.response .label{color:var(--signal);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}.response h2{margin:.6rem 0 .8rem;font-size:2rem;max-width:12ch}.response p{color:rgba(255,255,255,.7)}.response ul{list-style:none;padding:0;margin:1.35rem 0 0;display:grid;gap:.8rem}.response li{display:grid;grid-template-columns:30px 1fr;gap:.75rem;align-items:center;font-weight:750}.response li span{width:30px;height:30px;display:grid;place-items:center;color:var(--ink);background:var(--signal);border-radius:50%;font-size:.8rem;font-weight:900}
+    .trust{position:relative;z-index:2;display:grid;grid-template-columns:repeat(4,1fr);margin-top:4.5rem;border-top:1px solid rgba(255,255,255,.15)}.trust div{padding:1.4rem 1rem 0;border-right:1px solid rgba(255,255,255,.15)}.trust div:first-child{padding-left:0}.trust div:last-child{border-right:0}.trust strong{display:block;color:var(--signal);font-size:1.2rem}.trust span{color:rgba(255,255,255,.65);font-size:.82rem}
+    section{padding:clamp(4.5rem,9vw,8rem) 0}.section-head{display:flex;justify-content:space-between;gap:2rem;align-items:end;margin-bottom:2.6rem}.section-head>p{max-width:52ch;color:var(--steel)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.card{min-height:270px;display:flex;flex-direction:column;justify-content:space-between;padding:1.5rem;background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(7,26,34,.05);transition:transform .2s ease,box-shadow .2s ease}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.service-no{color:var(--steel);font-size:.8rem;font-weight:900;letter-spacing:.1em}.card h3{margin:2.5rem 0 .8rem}.card p{color:var(--steel)}.service-link{display:inline-flex;gap:.55rem;margin-top:1.6rem;color:var(--ink);font-weight:850;text-decoration:none}.service-link span{color:#8a6500}
+    .commercial{color:var(--white);background:var(--ink)}.commercial .eyebrow,.commercial .section-head>p{color:rgba(255,255,255,.65)}.split{display:grid;grid-template-columns:.78fr 1.22fr;gap:clamp(2rem,7vw,6rem);align-items:start}.board{border-top:1px solid rgba(255,255,255,.18)}.capability{display:grid;grid-template-columns:56px 1fr auto;gap:1rem;align-items:center;padding:1.35rem 0;border-bottom:1px solid rgba(255,255,255,.18)}.capability .index{color:var(--signal);font-weight:900}.capability p{margin-top:.35rem;color:rgba(255,255,255,.62);font-size:.92rem}.tag{padding:.35rem .6rem;color:var(--signal);border:1px solid rgba(245,197,66,.36);border-radius:999px;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .process-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,7vw,6rem)}.process-copy p:last-child{max-width:42ch;margin-top:1.25rem;color:var(--steel)}.steps{display:grid;gap:.8rem}.step{display:grid;grid-template-columns:58px 1fr;gap:1rem;align-items:start;padding:1.15rem;background:var(--white);border:1px solid var(--line);border-radius:14px}.step-number{width:46px;height:46px;display:grid;place-items:center;color:var(--ink);background:var(--signal);border-radius:10px;font-weight:900}.step p{margin-top:.35rem;color:var(--steel)}
+    .cta-band{padding-top:0}.cta{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:clamp(2rem,5vw,4rem);color:var(--white);background:var(--ink2);border-radius:28px;box-shadow:var(--shadow)}.cta:after{content:"";position:absolute;right:-3rem;bottom:-8rem;width:17rem;height:17rem;border:3rem solid rgba(245,197,66,.1);border-radius:50%}.cta h2{max-width:18ch}.cta p:last-child{max-width:52ch;margin-top:1rem;color:rgba(255,255,255,.68)}.cta .button{position:relative;z-index:1;min-width:180px}
+    footer{padding:2.5rem 0 6rem;color:var(--steel)}.footer-grid{display:flex;justify-content:space-between;gap:2rem;align-items:center;padding-top:1.5rem;border-top:1px solid var(--line)}.footer-grid p,.footer-links{font-size:.85rem}.footer-links{display:flex;gap:1rem;font-weight:700}
+    .whatsapp{position:fixed;right:1rem;bottom:1rem;z-index:30;width:58px;height:58px;display:grid;place-items:center;color:var(--white);background:#157f52;border:0;border-radius:50%;box-shadow:0 14px 35px rgba(7,26,34,.25);cursor:pointer;font-size:1.4rem}.mobile-bar{display:none}.toast{position:fixed;left:50%;bottom:1.25rem;z-index:80;width:min(calc(100% - 2rem),480px);padding:1rem 1.15rem;color:var(--white);background:var(--ink);border:1px solid rgba(255,255,255,.16);border-radius:12px;box-shadow:var(--shadow);transform:translate(-50%,180%);transition:transform .25s ease}.toast.show{transform:translate(-50%,0)}.toast strong{color:var(--signal)}
+    @media(max-width:900px){.links a:not(.nav-cta){display:none}.hero-grid,.split,.process-grid{grid-template-columns:1fr}.hero{background:radial-gradient(circle at 90% 15%,rgba(245,197,66,.16),transparent 23rem),var(--ink)}.response{max-width:580px}.trust{grid-template-columns:repeat(2,1fr);row-gap:1rem}.trust div:nth-child(2){border-right:0}.service-grid{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}}
+    @media(max-width:640px){body{padding-bottom:68px}.wrap{width:min(calc(100% - 1.25rem),var(--max))}.eyebrow{flex-wrap:wrap}.nav{min-height:66px}.brand small{display:none}.nav-cta{display:none}.hero{padding-top:3.5rem}.actions{display:grid}.actions .button{width:100%}.trust,.service-grid{grid-template-columns:1fr}.trust div{padding:.9rem 0 0;border-right:0}.capability{grid-template-columns:42px 1fr}.tag{grid-column:2;justify-self:start}.cta{grid-template-columns:1fr}.cta .button{width:100%}.footer-grid{align-items:flex-start;flex-direction:column}.whatsapp{bottom:82px;width:52px;height:52px}.mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;padding:.55rem;background:var(--ink);border-top:1px solid rgba(255,255,255,.14)}.mobile-bar button{min-width:0;min-height:48px;color:var(--white);background:transparent;border:0;font-weight:850;cursor:pointer}.mobile-bar button:first-child{color:var(--ink);background:var(--signal);border-radius:8px}.toast{bottom:5rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="AlderFlow home"><span class="mark" aria-hidden="true">AF</span><span>AlderFlow <small>Drainage & Infrastructure</small></span></a>
+      <nav class="links" aria-label="Primary navigation">
+        <a href="#services">Emergency services</a><a href="#commercial">Commercial</a><a href="#process">How we work</a>
+        <button class="nav-cta demo" type="button" data-action="call">Call response team</button>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Drainage response · Civil infrastructure</p>
+            <h1>Clear answers. Clean execution.</h1>
+            <p>From urgent blockages to planned drainage infrastructure, AlderFlow brings one accountable team, direct communication, and a practical route from first call to completed work.</p>
+            <div class="actions"><button class="button primary demo" type="button" data-action="call">Get urgent help <span aria-hidden="true">↗</span></button><a class="button secondary" href="#commercial">Plan a commercial project</a></div>
+          </div>
+          <aside class="response" aria-label="Emergency response information">
+            <p class="label">Rapid response desk</p><h2>When water cannot wait.</h2><p>Describe the issue, share access details, and get a clear next step from the response team.</p>
+            <ul><li><span>01</span> Blocked drains and toilets</li><li><span>02</span> Flooding and overflow</li><li><span>03</span> CCTV fault investigation</li></ul>
+          </aside>
+        </div>
+        <div class="trust" aria-label="Service strengths">
+          <div><strong>Direct</strong><span>One point of contact</span></div><div><strong>Documented</strong><span>Clear findings and scope</span></div><div><strong>Equipped</strong><span>Modern inspection methods</span></div><div><strong>Nationwide</strong><span>Planned project coverage</span></div>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">For homes and businesses</p><h2>Resolve the problem at its source.</h2></div><p>We begin with the right diagnosis, explain what we find, and recommend work that fits the actual condition of the system.</p></div>
+        <div class="service-grid">
+          <article class="card"><span class="service-no">SERVICE 01</span><div><h3>Drain unblocking</h3><p>Targeted clearance for sinks, toilets, gullies, and main drainage lines.</p><a class="service-link" href="#contact">Request response <span aria-hidden="true">→</span></a></div></article>
+          <article class="card"><span class="service-no">SERVICE 02</span><div><h3>CCTV surveys</h3><p>Internal pipe inspection to locate damage, recurring faults, and hidden obstructions.</p><a class="service-link" href="#contact">Arrange a survey <span aria-hidden="true">→</span></a></div></article>
+          <article class="card"><span class="service-no">SERVICE 03</span><div><h3>Cleaning & maintenance</h3><p>Planned jetting and maintenance designed to reduce disruption and repeat callouts.</p><a class="service-link" href="#contact">Build a plan <span aria-hidden="true">→</span></a></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="commercial" id="commercial">
+      <div class="wrap split">
+        <div><p class="eyebrow">Commercial & civil</p><h2>Infrastructure work built around the site.</h2></div>
+        <div class="board">
+          <article class="capability"><span class="index">01</span><div><h3>Drainage installation</h3><p>New lines, upgrades, connections, and coordinated groundworks.</p></div><span class="tag">Planned</span></article>
+          <article class="capability"><span class="index">02</span><div><h3>Condition assessment</h3><p>Survey-led reporting to support maintenance and capital decisions.</p></div><span class="tag">Evidence-led</span></article>
+          <article class="capability"><span class="index">03</span><div><h3>Site response support</h3><p>Practical coordination when drainage issues interrupt active operations.</p></div><span class="tag">Responsive</span></article>
+          <article class="capability"><span class="index">04</span><div><h3>Maintenance programmes</h3><p>Scheduled work with clear records, priorities, and follow-up actions.</p></div><span class="tag">Ongoing</span></article>
+        </div>
+      </div>
+    </section>
+    <section id="process">
+      <div class="wrap process-grid">
+        <div class="process-copy"><p class="eyebrow">A disciplined response</p><h2>Know what happens next.</h2><p>Good service is more than arriving on site. It is keeping the route to resolution clear at every stage.</p></div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><div><h3>Describe the issue</h3><p>Tell us what is happening, where it is, and whether access or operations are affected.</p></div></article>
+          <article class="step"><span class="step-number">02</span><div><h3>Confirm the response</h3><p>We set expectations, establish the right attendance, and identify any information needed in advance.</p></div></article>
+          <article class="step"><span class="step-number">03</span><div><h3>Resolve and report</h3><p>Work is completed against the agreed scope, with findings and follow-up actions communicated clearly.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band" id="contact">
+      <div class="wrap"><div class="cta"><div><p class="eyebrow">Start with a clear conversation</p><h2>Urgent issue or planned project?</h2><p>Contact the team with the site location and a short description. We will route the enquiry to the right response.</p></div><button class="button primary demo" type="button" data-action="contact">Contact AlderFlow</button></div></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-grid"><p>© 2026 AlderFlow. Independent portfolio concept for a fictional service brand.</p><div class="footer-links"><a href="#services">Services</a><a href="#commercial">Commercial</a></div></div></footer>
+  <button class="whatsapp demo" type="button" data-action="whatsapp" aria-label="Open WhatsApp contact demo">✦</button>
+  <div class="mobile-bar" aria-label="Mobile contact actions"><button class="demo" type="button" data-action="call">Call now</button><button class="demo" type="button" data-action="contact">Request callback</button></div>
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"><strong>Portfolio demo.</strong> <span id="toast-copy">Replace this action with the client’s verified contact details before launch.</span></div>
+  <script>
+    (() => {
+      const toast = document.querySelector('.toast');
+      const copy = document.querySelector('#toast-copy');
+      const messages = {
+        call: 'A live site would call the verified emergency response number.',
+        contact: 'A live site would open the verified enquiry channel.',
+        whatsapp: 'A live site would open the business’s verified WhatsApp number.'
+      };
+      let timer;
+      document.querySelectorAll('.demo').forEach((button) => {
+        button.addEventListener('click', () => {
+          copy.textContent = messages[button.dataset.action] || messages.contact;
+          toast.classList.add('show');
+          clearTimeout(timer);
+          timer = setTimeout(() => toast.classList.remove('show'), 4200);
+        });
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') toast.classList.remove('show');
+      });
+    })();
+  </script>
+</body>
+</html>
